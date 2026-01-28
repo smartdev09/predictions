@@ -1,0 +1,78 @@
+"""
+Constants for Cricket ML Predictor
+"""
+
+from pathlib import Path
+
+# Model parameters
+DECAY_FACTOR = 0.95
+MIN_PRIOR_MATCHES = 5
+RECENT_FORM_WINDOW = 10
+
+# Venue to home team mapping
+VENUE_HOME_TEAMS = {
+    "pakistan": "Pakistan",
+    "lahore": "Pakistan",
+    "karachi": "Pakistan",
+    "rawalpindi": "Pakistan",
+    "multan": "Pakistan",
+    "faisalabad": "Pakistan",
+    "gaddafi": "Pakistan",
+    "australia": "Australia",
+    "melbourne": "Australia",
+    "sydney": "Australia",
+    "brisbane": "Australia",
+    "adelaide": "Australia",
+    "perth": "Australia",
+    "hobart": "Australia",
+    "india": "India",
+    "mumbai": "India",
+    "delhi": "India",
+    "bangalore": "India",
+    "bengaluru": "India",
+    "chennai": "India",
+    "kolkata": "India",
+    "hyderabad": "India",
+    "ahmedabad": "India",
+    "england": "England",
+    "london": "England",
+    "lords": "England",
+    "oval": "England",
+    "manchester": "England",
+    "birmingham": "England",
+    "edgbaston": "England",
+    "trent bridge": "England",
+    "southampton": "England",
+    "bristol": "England",
+    "nottingham": "England",
+    "new zealand": "New Zealand",
+    "auckland": "New Zealand",
+    "wellington": "New Zealand",
+    "christchurch": "New Zealand",
+    "south africa": "South Africa",
+    "johannesburg": "South Africa",
+    "cape town": "South Africa",
+    "durban": "South Africa",
+    "centurion": "South Africa",
+    "sri lanka": "Sri Lanka",
+    "colombo": "Sri Lanka",
+    "kandy": "Sri Lanka",
+    "galle": "Sri Lanka",
+    "west indies": "West Indies",
+    "barbados": "West Indies",
+    "jamaica": "West Indies",
+    "trinidad": "West Indies",
+    "guyana": "West Indies",
+    "antigua": "West Indies",
+    "st lucia": "West Indies",
+    "bangladesh": "Bangladesh",
+    "dhaka": "Bangladesh",
+    "chittagong": "Bangladesh",
+    "mirpur": "Bangladesh",
+    "zimbabwe": "Zimbabwe",
+    "harare": "Zimbabwe",
+    "bulawayo": "Zimbabwe",
+    "ireland": "Ireland",
+    "dublin": "Ireland",
+    "belfast": "Ireland",
+}
