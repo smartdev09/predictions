@@ -5,7 +5,6 @@ ML-based predictor for T20 International cricket matches using historical match 
 ## Quick Start
 
 ```bash
-cd cricket_predictions/ml_predictor
 python predictor.py
 ```
 
