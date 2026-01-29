@@ -2,29 +2,14 @@
 
 ML-based predictor for T20 International cricket matches using historical match data.
 
-## Quick Start
-
 ```bash
+pip install pandas numpy scikit-learn
 python predictor.py
 ```
 
-## Requirements
-
-- Python 3.10+
-- pandas
-- numpy
-- scikit-learn
-
-Install dependencies:
-```bash
-pip install pandas numpy scikit-learn
-```
-
-## Data
-
 Thanks to https://cricsheet.org/ for collecting and formatting data. 
 
-## Features Used
+## Features
 
 | Feature | Description |
 |---------|-------------|
@@ -45,23 +30,3 @@ Thanks to https://cricsheet.org/ for collecting and formatting data.
 | `is_neutral` | 1 if neutral venue |
 | `toss_winner_is_team1` | 1 if Team 1 won toss |
 | `elected_to_bat` | 1 if toss winner chose to bat |
-
-## Assumptions
-
-1. **Data is pre-filtered**: All JSON files in the data directory are valid T20I matches (no league matches like IPL/BBL)
-
-2. **Time-decay weighting**: Recent matches weighted more heavily than old ones using exponential decay (factor: 0.95)
-
-3. **Minimum history**: Matches are skipped if either team has fewer than 5 prior matches
-
-4. **No data leakage**: Features are computed using only matches that occurred before the match being predicted
-
-5. **Chronological train/test split**: 80/20 split based on date, not random
-
-6. **Home team detection**: Based on venue name keywords (e.g., "Lahore" → Pakistan home)
-
-7. **Excluded matches**: Ties, no-results, and DLS-affected matches are excluded
-
-## Model
-
-- **Algorithm**: Logistic Regression
